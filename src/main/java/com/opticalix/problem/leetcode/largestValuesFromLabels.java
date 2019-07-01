@@ -5,6 +5,7 @@ import com.opticalix.lib.Utils;
 import java.util.*;
 
 /**
+ * 贪心
  * https://leetcode-cn.com/problems/largest-values-from-labels/solution/tan-xin-hen-jian-dan-de-si-lu-han-ti-yi-fen-xi-by-/
  */
 public class largestValuesFromLabels {
