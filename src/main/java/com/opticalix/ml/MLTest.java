@@ -10,6 +10,8 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
+//https://www.cnblogs.com/bnuvincent/p/6442778.html
+//https://stackoverflow.com/questions/10792576/libsvm-java-implementation
 public class MLTest {
 
     public static void main(String[] args) throws IOException {
