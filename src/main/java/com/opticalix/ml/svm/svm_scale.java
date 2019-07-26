@@ -1,9 +1,7 @@
-package com.opticalix.ml;
+package com.opticalix.ml.svm;
 
-import libsvm.*;
 import java.io.*;
 import java.util.*;
-import java.text.DecimalFormat;
 
 class svm_scale
 {

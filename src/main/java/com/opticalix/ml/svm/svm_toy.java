@@ -1,4 +1,4 @@
-package com.opticalix.ml;
+package com.opticalix.ml.svm;
 
 import libsvm.*;
 import java.applet.*;

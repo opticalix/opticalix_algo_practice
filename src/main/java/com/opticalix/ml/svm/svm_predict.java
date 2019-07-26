@@ -1,10 +1,10 @@
-package com.opticalix.ml;
+package com.opticalix.ml.svm;
 
 import libsvm.*;
 import java.io.*;
 import java.util.*;
 
-class svm_predict {
+public class svm_predict {
 	private static svm_print_interface svm_print_null = new svm_print_interface()
 	{
 		public void print(String s) {}
