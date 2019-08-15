@@ -3,6 +3,7 @@ package com.opticalix.problem_archieved_2017;
 import java.util.*;
 
 import com.opticalix.lib.Utils;
+import com.opticalix.problem.BasicDS;
 
 import java.io.*;
 
@@ -67,7 +68,7 @@ public class Jiudu1173 {
 	}
 	
 	private static int binSearch(int[] a, int target) {
-		return Utils.binSearch(a, 0, a.length-1, target);
+		return BasicDS.binSearch(a, 0, a.length-1, target);
 	}
 
 	/**
@@ -75,7 +76,7 @@ public class Jiudu1173 {
 	 * @param a
 	 */
 	private static void sort(int[] a) {
-		Utils.qSort(a, 0, a.length-1);
+		BasicDS.qSort(a, 0, a.length-1);
 //		Arrays.sort(a);
 	}
 

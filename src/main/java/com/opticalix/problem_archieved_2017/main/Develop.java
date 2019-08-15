@@ -6,7 +6,8 @@ import com.opticalix.lib.MyCollections;
 import com.opticalix.lib.Utils;
 import com.opticalix.model.Cat;
 import com.opticalix.model.Pet;
-import com.opticalix.model.TreeNode;
+import com.opticalix.lib.TreeNode;
+import com.opticalix.problem.BasicDS;
 
 import java.io.*;
 import java.text.DecimalFormat;
@@ -243,7 +244,7 @@ public class Develop {
 
 	private static void testBubbleSort(int[] A) {
 		Utils.pArr(A);
-		Utils.bubbleSort(A, 0, A.length-1);
+		BasicDS.bubbleSort(A, 0, A.length-1);
 		Utils.pArr(A);
 	}
 
@@ -267,7 +268,7 @@ public class Develop {
 
 	private static void testUtils() {
 		int[] v = new int[]{1,5,2,4,3};
-		Utils.qSort2(v, 0, v.length-1);
+		BasicDS.qSort2(v, 0, v.length-1);
 		Utils.pArr(v);
 	}
 

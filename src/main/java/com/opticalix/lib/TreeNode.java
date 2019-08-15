@@ -1,4 +1,4 @@
-package com.opticalix.model;
+package com.opticalix.lib;
 
 import java.util.LinkedList;
 
