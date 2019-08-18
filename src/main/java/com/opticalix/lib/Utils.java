@@ -14,6 +14,17 @@ public class Utils {
 		}
 	}
 
+	public static void pArr(int[][][] arr) {
+		for (int i = 0; i < arr.length; i++) {
+			for (int j = 0; j < arr[0].length; j++) {
+				for (int k = 0; k < arr[0][0].length; k++) {
+					System.out.print(arr[i][j][k] + ",\t");
+				}
+				System.out.println();
+			}
+		}
+	}
+
 	public static void swap(char[] chArr, int a, int b) {
 		char tmp = chArr[a];
 		chArr[a] = chArr[b];
