@@ -2,6 +2,10 @@ package com.opticalix.lib;
 
 import java.util.LinkedList;
 
+/**
+ * 貌似不是自己实现的
+ * @param <T>
+ */
 public class TreeNode<T> {
 	
 	public TreeNode(T val) {
@@ -13,8 +17,8 @@ public class TreeNode<T> {
 	}
 
 	public static void main(String[] args){
-		
 	}
+
 	public TreeNode<T> l;
 	public TreeNode<T> r;
 	public T val;
