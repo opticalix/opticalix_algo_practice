@@ -1,5 +1,7 @@
 package com.opticalix.lib;
 
+import com.google.gson.Gson;
+
 import java.util.LinkedList;
 
 /**
@@ -22,7 +24,26 @@ public class TreeNode<T> {
 	public TreeNode<T> l;
 	public TreeNode<T> r;
 	public T val;
-	
+
+	@Override
+	public String toString() {
+		return new Gson().toJson(this);
+	}
+
+	/**
+	 *   5
+	 *  3 6
+	 * 1
+	 * @return
+	 */
+	public static TreeNode<Integer> testTree() {
+		TreeNode<Integer> root = new TreeNode<>(5);
+		root.l = new TreeNode<>(3);
+		root.r = new TreeNode<>(6);
+		root.l.l = new TreeNode<>(1);
+		return root;
+	}
+
 	public static <T> void preOrderTraversal(TreeNode<T> root){
 		System.out.print(root.val);
 		if(root.l != null){

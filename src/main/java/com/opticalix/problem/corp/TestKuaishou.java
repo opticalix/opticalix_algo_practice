@@ -1,7 +1,9 @@
 package com.opticalix.problem.corp;
 
+import com.opticalix.lib.TreeNode;
 import com.opticalix.lib.Utils;
 
+import java.util.LinkedList;
 import java.util.Scanner;
 import java.util.StringTokenizer;
 
@@ -12,7 +14,11 @@ import java.util.StringTokenizer;
  */
 public class TestKuaishou {
     public static void main(String[] args) {
-        p1();
+//        System.out.println(serialize(TreeNode.testTree()));
+//        System.out.println(TreeNode.testTree().toString());
+//        System.out.println(new Gson().fromJson(TreeNode.testTree().toString(), TreeNode.class));
+        System.out.println(deserialize("531$$$6$$"));
+        System.out.println(serialize(deserialize("531$$$6$$")));
     }
 
     private static void p2() {
@@ -116,6 +122,52 @@ public class TestKuaishou {
             } else {
                 fmt1[i] = 0;
             }
+        }
+    }
+
+    /**
+     * 二叉树序列化
+     * 其实用先序遍历即可，空用特殊字符实现
+     * @param root
+     * @return
+     */
+    private static String serialize(TreeNode<Integer> root) {
+        if (root == null) {
+            return "$";
+        } else {
+            return root.val + serialize(root.l) + serialize(root.r);
+        }
+    }
+
+    /**
+     * 二叉树的反序列化
+     * 这里不能用param传递参数 要用全局queue或list 这样直接remove就好了
+     * @param s
+     * @return
+     */
+    private static TreeNode<Integer> deserialize(String s) {
+        char[] chars = s.toCharArray();
+        LinkedList<Character> queue = new LinkedList<>();
+        for (int i = 0; i < chars.length; i++) {
+            queue.add(chars[i]);
+        }
+        return deserialize(queue);
+    }
+
+    private static TreeNode<Integer> deserialize(LinkedList<Character> q) {
+        if (q == null || q.isEmpty()) {
+            return null;
+        } else {
+            TreeNode<Integer> node = new TreeNode<>();
+            Character c = q.removeFirst();
+            if (c == '$') {
+                return null;
+            } else {
+                node.val = c - '0';
+                node.l = deserialize(q);
+                node.r = deserialize(q);
+            }
+            return node;
         }
     }
 }

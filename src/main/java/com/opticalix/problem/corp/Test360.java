@@ -15,6 +15,47 @@ public class Test360 {
     }
 
     /**
+     * https://www.nowcoder.com/discuss/240269?type=2
+     * TODO dfs+回溯吧
+     * 散步，n是轴节点数，m是提供的观测次数。下面每行代表一段距离。求最终停留位置
+     * @return
+     */
+    private static int p2() {
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        int m = sc.nextInt();
+        sc.nextLine();
+        while(m-- > 0) {
+            int val = sc.nextInt();
+            sc.nextLine();
+        }
+        return 0;
+    }
+
+    /**
+     * 最多子串数
+     * @return
+     */
+    private static int p1() {
+        Scanner sc = new Scanner(System.in);
+        String str = sc.nextLine();
+        HashMap<Character, Integer> map = new HashMap<>();
+        int max = 0;
+        for (int i = 0; i < str.length(); i++) {
+            char c = str.charAt(i);
+            if (map.containsKey(c)) {
+                int cnt = map.get(c) + 1;
+                map.put(c, cnt);
+                max = Math.max(cnt, max);
+            } else {
+                map.put(c, 1);
+                max = Math.max(1, max);
+            }
+        }
+        return max;
+    }
+
+    /**
      * O(N^2*M)
      * 2个n位m进制数 自由组合后按位相加取余 求最大值
      * 5 5 4 4 1 1 1 4 3 0 1 2 -> 4 4 4 2 0
