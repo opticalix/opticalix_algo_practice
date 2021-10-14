@@ -3,6 +3,27 @@ package com.opticalix.problem.others;
 import java.util.Scanner;
 
 /**
+ * 	//	递归实现：
+ * 	public  int gcd (int a,int b)
+ *        {
+ * 		if(a%b==0)
+ *
+ * 	       return b;
+ * 	else
+ * 	       return gcd(b,a%b);}
+ *
+ * 	最小公倍数是两个数字相乘除以最大公约数
+ *
+ *
+ * public boolean isUgly(int num) {
+ *         //需要特判0
+ *         if (num < 1) return false;
+ *         while (num % 2 == 0) num /= 2;
+ *         while (num % 3 == 0) num /= 3;
+ *         while (num % 5 == 0) num /= 5;
+ *         return num == 1;
+ *     }
+ *
  * @author Felix
  * @date 07/09/2019 11:13 AM
  * @email opticalix@gmail.com
