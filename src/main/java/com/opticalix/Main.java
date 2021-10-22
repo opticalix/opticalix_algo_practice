@@ -1,9 +1,8 @@
 package com.opticalix;
 
-import com.opticalix.problem.leetcode.HouseRobber;
+import java.util.*;
 
 public class Main {
     public static void main(String[] args) {
-        HouseRobber.run(args);
     }
 }
